@@ -4,8 +4,10 @@ class PID{
     public:
         PID();
         ~PID();
-        double update(double);
         void reset();
+        void setWeights(double , double , double);
+        double update(double);
+        
 
     private:
         double Kp,Ki,Kd;

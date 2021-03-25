@@ -6,6 +6,9 @@ PID::PID(){
 PID::~PID(){
 
 }
+void setWeights(double Kp, double Ki, double kd){
+    
+}
 double PID::update(double error){
     I=trim(I+error,Imin,Imax);
     if(firstRun){
