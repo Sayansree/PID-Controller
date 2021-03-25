@@ -6,6 +6,8 @@ class PID{
         ~PID();
         void reset();
         void setWeights(double , double , double);
+        void setILimits(double, double);
+        void setPIDLimits(double, double);
         double update(double);
         
 

@@ -1,7 +1,8 @@
 #include "PID.h"
 
 PID::PID(){
-
+    setWeights(0,0,0);
+    reset();
 }
 PID::~PID(){
 
@@ -9,7 +10,15 @@ PID::~PID(){
 void PID::setWeights(double Kp, double Ki, double kd){
     this->Kp=Kp;
     this->Ki=Ki;
-    this->Kd=kd
+    this->Kd=kd;
+}
+void PID::setILimits(double Imin, double Imax){
+    this->Imax=Imax;
+    this->Imin=Imin;
+}
+void PID::setPIDLimits(double PIDmin, double PIDmax){
+    this->PIDmax=PIDmax;
+    this->PIDmin=PIDmin;
 }
 double PID::update(double error){
     I=trim(I+error,Imin,Imax);
