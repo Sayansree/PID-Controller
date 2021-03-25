@@ -38,3 +38,8 @@ void PID::reset(){
     prevError=0;
     firstRun=true;
 }
+double PID::trim(double val, double min, double max){
+    if(val>max)return max;
+    if(val<min)return min;
+    return val;
+}
