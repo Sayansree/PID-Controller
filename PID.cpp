@@ -6,8 +6,10 @@ PID::PID(){
 PID::~PID(){
 
 }
-void setWeights(double Kp, double Ki, double kd){
-    
+void PID::setWeights(double Kp, double Ki, double kd){
+    this->Kp=Kp;
+    this->Ki=Ki;
+    this->Kd=kd
 }
 double PID::update(double error){
     I=trim(I+error,Imin,Imax);
