@@ -1,3 +1,7 @@
+/* written by Sayansree Paria
+ * email : sayansreeparia@gmail.com
+ * github : https://github.com/Sayansree
+ */
 #include "PID.h"
 
 PID::PID(){

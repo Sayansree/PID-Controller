@@ -1,3 +1,7 @@
+/* written by Sayansree Paria
+ * email : sayansreeparia@gmail.com
+ * github : https://github.com/Sayansree
+ */
 #ifndef PID_H
 #define PID_H
 class PID{
